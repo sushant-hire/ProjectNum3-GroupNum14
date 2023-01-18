@@ -1,0 +1,53 @@
+.dialogContainer {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.dialogHeading {
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    top: -25px;
+}
+
+.para {
+    width: 50%;
+    text-align: center;
+    border-bottom: 1px solid #000;
+    line-height: 0.1em;
+    margin: 5px 0 5px;
+}
+
+.paraSpan {
+    background: #fff;
+    padding: 0 10px;
+}
+
+.dialogContentContainer {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 39vw;
+    height: 80vh;
+    gap: 1.5rem;
+    position: relative;
+    bottom: 90px;
+}
+
+
+.newDialogContainer {
+    width: 39vw;
+    height: 80vh;
+    text-align: center;
+
+}
+
+.birthDayContainer {
+display: flex;
+justify-content: center;
+align-items: center;
+position: relative;
+bottom: 220px;
+}

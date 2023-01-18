@@ -1,0 +1,38 @@
+
+
+.dialogContainer {
+    font-family: 'Poppins', sans-serif;
+}
+
+.dialogHeading {
+    position: relative;
+    top: -25px;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.para {
+    width: 50%;
+    text-align: center;
+    border-bottom: 1px solid #000;
+    line-height: 0.1em;
+    margin: 5px 0 5px;
+}
+
+.paraSpan {
+    background: #fff;
+    padding: 0 10px;
+}
+
+.dialogContentContainer {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    width: 39vw;
+    height: 80vh;
+    position: relative;
+    bottom: 70px;
+}

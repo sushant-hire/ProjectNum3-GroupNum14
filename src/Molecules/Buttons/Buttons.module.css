@@ -1,0 +1,15 @@
+.formButtons {
+    font-size: medium;
+    width: 20vw;
+    height: 5vh;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+}
+
+.formButtons:hover {
+    background-color: gainsboro;
+}
