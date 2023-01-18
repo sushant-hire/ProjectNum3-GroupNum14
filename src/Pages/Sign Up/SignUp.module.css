@@ -45,9 +45,18 @@
 }
 
 .birthDayContainer {
-display: flex;
-justify-content: center;
-align-items: center;
-position: relative;
-bottom: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: 220px;
+}
+
+input {
+    width: 60%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin: 8px 0;
 }

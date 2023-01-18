@@ -38,9 +38,9 @@ const SignUp = () => {
     const handlePasswordChange = (event) => {
         setPassword(event.target.value);
     };
+
     const handleSubmit = (event) => {
         event.preventDefault();
-
 
         if (uMessage !== "Invalid username! Your username must contain alteast 1 capital letter, a number and should meet the 7 - 29 character length.") {
             localStorage.setItem("username", username)
@@ -48,14 +48,11 @@ const SignUp = () => {
         if (message1 !== "Invalid password! Your password must contain at least 1 uppercase alphabet, 1 lowercase alphabet, number values between 0-9, 1 special character, and minimum 8 characters.") {
             localStorage.setItem("password", password)
         }
-        if (message !== "Invalid email! Your email ID must    contain all domain requirements.") {
+        if (message !== "Invalid email! Your email ID must contain all domain requirements.") {
             localStorage.setItem("email", email)
         }
 
         if ((uMessage !== "Invalid username! Your username must contain alteast 1 capital letter, a number and should meet the 7 - 29 character length.") && (message1 !== "Invalid password! Your password must contain at least 1 uppercase alphabet, 1 lowercase alphabet, number values between 0-9, 1 special character, and minimum 8 characters.") && (message !== "Invalid email! Your email ID must contain all domain requirements.")) {
-            localStorage.setItem("username", username)
-            localStorage.setItem("password", password)
-            localStorage.setItem("email", email)
             alert("Successfully registered")
         }
     }
@@ -117,45 +114,30 @@ const SignUp = () => {
                             <DialogTitle className={styles.dialogHeading} id="responsive-dialog-title">
                                 <span style={{ fontSize: '2vw', fontWeight: 'bolder', position: 'relative', top: '40px' }}>{'Create Your Account'}</span>
                             </DialogTitle >
-                            <Box
-                                component="form"
-                                sx={{
-                                    '& > :not(style)': { m: 1, width: '30ch' },
-                                }}
-                                noValidate
-                                autoComplete="off"
+                            <input
 
+                                type="text"
+                                placeholder='Username'
+                                value={username}
+                                onChange={handleUsername} required
+                            />
+                            <span style={{ color: 'red' }}>{uMessage}</span>
 
-                            >
-                                <TextField id="outlined-basic" label="Name" variant="outlined" type="text"
-                                    value={username}
-                                    onChange={handleUsername} required />
-                            </Box>
-                            <Box
-                                component="form"
-                                sx={{
-                                    '& > :not(style)': { m: 1, width: '30ch' },
-                                }}
-                                noValidate
-                                autoComplete="off"
-                            >
-                                <TextField id="outlined-basic" label="Email" variant="outlined" type="email"
-                                    name="email"
-                                    value={email}
-                                    onChange={handleEmailChange} required />
-                            </Box>
-                            <Box
-                                component="form"
-                                sx={{
-                                    '& > :not(style)': { m: 1, width: '30ch' },
-                                }}
-                                noValidate
-                                autoComplete="off"
-                            >
-                                <TextField id="outlined-basic" label="Password" variant="outlined" type="password"
-                                    value={password}
-                                    onChange={handlePasswordChange} required />
-                            </Box>
+                            <input
+                                type="email"
+                                placeholder="Email"
+                                value={email}
+                                onChange={handleEmailChange} required
+                            />
+                            <span style={{ color: 'red' }}>{message}</span>
+                            <input
+                                type="password"
+                                placeholder="Password"
+                                value={password}
+                                onChange={handlePasswordChange} required
+                            />
+                            <span style={{ color: 'red' }}>{message1}</span>
+
 
                             <h4>Date of birth</h4>
                             <p style={{ fontSize: '14px', marginLeft: '9.5rem', marginRight: '9.5rem', display: 'flex', alignItems: 'center' }}>This will not be shown publicly. Confirm your own age, even if this account is for a business, a pet, or something else.</p>
@@ -180,7 +162,15 @@ const SignUp = () => {
                             <Buttons buttonText="Submit" onClick={() => { Checkpassword(); Checkemail(); usernameValidation(); handleSubmit(); }} />
                         </div>
                     </>)
+
+
+
                     :
+
+
+
+
+
                     (<div className={styles.dialogContentContainer} >
                         <TwitterIcon style={{ fontSize: '2.5vw', color: '#00ACEE', position: 'relative', top: '50px' }} />
                         <DialogTitle className={styles.dialogHeading} id="responsive-dialog-title">
